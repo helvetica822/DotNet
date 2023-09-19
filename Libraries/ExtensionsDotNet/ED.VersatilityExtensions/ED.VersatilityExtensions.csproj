@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Title>$(AssemblyName)</Title>
+		<Authors>Masashi.Ohashi</Authors>
+		<Company></Company>
+		<Copyright>Copyright © 2023 $(Authors) All Rights Reserved.</Copyright>
+		<NeutralLanguage>ja-JP</NeutralLanguage>
+	</PropertyGroup>
+
+</Project>

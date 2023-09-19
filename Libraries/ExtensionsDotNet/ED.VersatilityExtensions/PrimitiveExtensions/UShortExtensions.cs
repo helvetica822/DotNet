@@ -1,0 +1,109 @@
+﻿namespace ED.VersatilityExtensions.PrimitiveExtensions
+{
+
+    /// <summary>
+    /// <see cref="ushort"/> の拡張機能を提供します。
+    /// </summary>
+    public static class UShortExtensions
+    {
+
+        // ↓ Extension↓
+
+        #region DelimitedString
+
+        /// <summary>
+        /// この数値をカンマ記号「,」で区切った整数文字列に変換します。
+        /// </summary>
+        /// <param name="value">数値。</param>
+        /// <returns>カンマ記号「,」で区切った数値文字列。</returns>
+        public static string ToDelimitedString(this ushort value) => ((decimal)value).ToDelimitedString();
+
+        #endregion
+
+        #region To Hour or Minute
+
+        /// <summary>
+        /// この数値を秒数とみなし、時間数に換算します。
+        /// </summary>
+        /// <param name="value">数値。</param>
+        /// <returns>時間数。</returns>
+        public static ushort ToHourCount(this ushort value) => (ushort)((decimal)value).ToHourCount();
+
+        /// <summary>
+        /// この数値を秒数とみなし、時間数に換算した余りを算出します。
+        /// </summary>
+        /// <param name="value">数値。</param>
+        /// <returns>時間数に換算した余り。</returns>
+        public static ushort ToHourCountRemainder(this ushort value) => (ushort)((decimal)value).ToHourCountRemainder();
+
+        /// <summary>
+        /// この数値を秒数とみなし、分数に換算します。
+        /// </summary>
+        /// <param name="value">数値。</param>
+        /// <returns>分数。</returns>
+        public static ushort ToMinuteCount(this ushort value) => (ushort)((decimal)value).ToMinuteCount();
+
+        /// <summary>
+        /// この数値を秒数とみなし、分数に換算した余りを算出します。
+        /// </summary>
+        /// <param name="value">数値。</param>
+        /// <returns>分数に換算した余り。</returns>
+        public static ushort ToMinuteCountRemainder(this ushort value) => (ushort)((decimal)value).ToMinuteCountRemainder();
+
+        #endregion
+
+        #region Convert From Base Number
+
+        /// <summary>
+        /// この数値と等価な 16 進数文字列に変換します。
+        /// </summary>
+        /// <param name="value">数値。</param>
+        /// <returns>16 進数文字列。</returns>
+        public static string ToHexadecimal(this ushort value) => ((long)value).ToHexadecimal();
+
+        /// <summary>
+        /// この数値と等価な 8 進数文字列に変換します。
+        /// </summary>
+        /// <param name="value">数値。</param>
+        /// <returns>8 進数文字列。</returns>
+        public static string ToOctalNumber(this ushort value) => ((long)value).ToOctalNumber();
+
+        /// <summary>
+        /// この数値と等価な 2 進数文字列に変換します。
+        /// </summary>
+        /// <param name="value">数値。</param>
+        /// <returns>2 進数文字列。</returns>
+        public static string ToBinaryNumber(this ushort value) => ((long)value).ToBinaryNumber();
+
+        /// <summary>
+        /// この数値を指定した基数に基づいて変換します。
+        /// </summary>
+        /// <param name="value">数値。</param>
+        /// <param name="baseNumber">基数。</param>
+        /// <returns>指定した基数文字列。</returns>
+        public static string ToBaseNumber(this ushort value, ushort baseNumber) => ((long)value).ToBaseNumber(baseNumber);
+
+        #endregion
+
+        #region GCD, LCD
+
+        /// <summary>
+        /// この数値と比較数値から最大公約数を求めます。
+        /// </summary>
+        /// <param name="value">数値。</param>
+        /// <param name="compareValue">比較数値。</param>
+        /// <returns>最大公約数。</returns>
+        public static ushort CalculationGCD(this ushort value, ushort compareValue) => (ushort)((ulong)value).CalculationGCD(compareValue);
+
+        /// <summary>
+        /// この数値と比較数値から最小公倍数を求めます。
+        /// </summary>
+        /// <param name="value">数値。</param>
+        /// <param name="compareValue">比較数値。</param>
+        /// <returns>最小公倍数。</returns>
+        public static ushort CalculationLCD(this ushort value, ushort compareValue) => (ushort)((ulong)value).CalculationLCD(compareValue);
+
+        #endregion
+
+    }
+}

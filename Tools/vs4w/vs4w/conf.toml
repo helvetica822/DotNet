@@ -1,0 +1,3 @@
+[VpnSettings]
+ServerAddress = "サーバアドレス"
+PreSharedKey = "事前共有キー"
