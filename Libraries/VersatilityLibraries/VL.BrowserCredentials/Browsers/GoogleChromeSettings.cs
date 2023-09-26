@@ -1,6 +1,4 @@
-﻿using ED.VersatilityExtensions.PrimitiveExtensions;
-
-namespace VL.BrowserCredentials.Browsers
+﻿namespace VL.BrowserCredentials.Browsers
 {
 
     [BrowserInfo("GoogleChrome", "Google Chrome")]
@@ -17,21 +15,11 @@ namespace VL.BrowserCredentials.Browsers
 
         internal override string ProcessName => "chrome";
 
-        protected override UserFolderType FolderType => UserFolderType.Local;
-
         internal override string LoginDataPath(string profile) => $@"{this.GetBrowserCommonPathFromRoot()}\{profile}\Login Data";
 
-        internal override IDictionary<string, string> GetProfiles()
-        {
-            var paths = new Dictionary<string, string>();
+        internal override IDictionary<string, string> GetProfiles() => this.GetDefaultAndNumberingProfiles();
 
-            foreach (var p in this.GetBrowserCommonPathFromRoot().GetSubDirectoriesPathOfCurrent("Profile*").Select(p => p.GetFileName()))
-            {
-                if (p is not null) paths.Add(p, p);
-            }
-
-            return paths;
-        }
+        protected override UserFolderType FolderType => UserFolderType.Local;
 
     }
 

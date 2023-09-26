@@ -16,11 +16,17 @@ namespace VL.BrowserCredentials.Browsers
 
         internal abstract string ProcessName { get; }
 
-        protected abstract UserFolderType FolderType { get; }
-
         internal abstract string LoginDataPath(string profile);
 
         internal abstract IDictionary<string, string> GetProfiles();
+
+        protected abstract UserFolderType FolderType { get; }
+
+        internal bool ExistsBrowserCommonPath() => this.GetBrowserCommonPathFromRoot().ExistsDirectory();
+
+        internal bool ExistsLoginData(string profile) => this.LoginDataPath(profile).ExistsFile();
+
+        internal bool ExistsDecryptionKey() => this.DecryptionKeyPath.ExistsFile();
 
         protected string GetBrowserCommonPathFromRoot()
         {
@@ -28,15 +34,29 @@ namespace VL.BrowserCredentials.Browsers
             return $@"{userFolder}\{this.BrowserCommonPath}";
         }
 
-        internal bool ExistsBrowserCommonPath() => this.GetBrowserCommonPathFromRoot().ExistsDirectory();
+        protected IDictionary<string, string> GetDefaultAndNumberingProfiles()
+        {
+            var paths = new Dictionary<string, string>();
+
+            foreach (var p in this.GetBrowserCommonPathFromRoot().GetSubDirectoriesPathOfCurrent().Where(p => this.IsDefaultAndNumberingProfile(p)).Select(p => p.GetFileName()))
+            {
+                if (p is not null) paths.Add(p, p);
+            }
+
+            return paths;
+        }
 
         private string GetRomingApplicationDataPath() => Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
         private string GetLocalApplicationDataPath() => Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
-        internal bool ExistsLoginData(string profile) => this.LoginDataPath(profile).ExistsFile();
+        private bool IsDefaultAndNumberingProfile(string path)
+        {
+            var directoryName = path.GetFileName();
+            if (directoryName is null) return false;
 
-        internal bool ExistsDecryptionKey() => this.DecryptionKeyPath.ExistsFile();
+            return directoryName.StartsWith("Profile ") || directoryName == "Default";
+        }
 
     }
 

@@ -15,8 +15,6 @@
 
         internal override string ProcessName => "opera";
 
-        protected override UserFolderType FolderType => UserFolderType.Roming;
-
         internal override string LoginDataPath(string profile)
         {
             _ = profile;
@@ -24,6 +22,8 @@
         }
 
         internal override IDictionary<string, string> GetProfiles() => new Dictionary<string, string>() { { string.Empty, "<プロファイルなし>" } };
+
+        protected override UserFolderType FolderType => UserFolderType.Roming;
 
     }
 

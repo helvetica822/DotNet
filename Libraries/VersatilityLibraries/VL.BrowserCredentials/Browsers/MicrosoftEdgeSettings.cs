@@ -15,11 +15,11 @@
 
         internal override string ProcessName => "msedge";
 
-        protected override UserFolderType FolderType => UserFolderType.Local;
-
         internal override string LoginDataPath(string profile) => $@"{this.GetBrowserCommonPathFromRoot()}\{profile}\Login Data";
 
-        internal override IDictionary<string, string> GetProfiles() => new Dictionary<string, string>() { { "Default", "Default" } };
+        internal override IDictionary<string, string> GetProfiles() => this.GetDefaultAndNumberingProfiles();
+
+        protected override UserFolderType FolderType => UserFolderType.Local;
 
     }
 
