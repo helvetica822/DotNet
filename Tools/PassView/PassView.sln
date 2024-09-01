@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassView", "PassView\PassView.csproj", "{EB50DEFC-1465-4313-A391-3B98E109BAD5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VL.BrowserCredentials", "..\..\Libraries\VersatilityLibraries\VL.BrowserCredentials\VL.BrowserCredentials.csproj", "{A2A6A592-771B-4D11-9A87-354C45B4FC2C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ED.VersatilityExtensions", "..\..\Libraries\ExtensionsDotNet\ED.VersatilityExtensions\ED.VersatilityExtensions.csproj", "{D992321C-742E-44CF-988B-2635DDCCC27C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WE.DotNet4Win", "..\..\Libraries\WpfExtended\WE.DotNet4Win\WE.DotNet4Win.csproj", "{4A32487B-4B47-4424-BCB0-2D81E5B0F65B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PE.ReactiveProperty.Extended4DotNet", "..\..\Libraries\PackageExtended\PE.ReactiveProperty.Extended4DotNet\PE.ReactiveProperty.Extended4DotNet.csproj", "{480A7736-AF1C-4C99-B6C6-E181A2AF3C1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB50DEFC-1465-4313-A391-3B98E109BAD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB50DEFC-1465-4313-A391-3B98E109BAD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB50DEFC-1465-4313-A391-3B98E109BAD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB50DEFC-1465-4313-A391-3B98E109BAD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2A6A592-771B-4D11-9A87-354C45B4FC2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2A6A592-771B-4D11-9A87-354C45B4FC2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2A6A592-771B-4D11-9A87-354C45B4FC2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A6A592-771B-4D11-9A87-354C45B4FC2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D992321C-742E-44CF-988B-2635DDCCC27C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D992321C-742E-44CF-988B-2635DDCCC27C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D992321C-742E-44CF-988B-2635DDCCC27C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D992321C-742E-44CF-988B-2635DDCCC27C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A32487B-4B47-4424-BCB0-2D81E5B0F65B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A32487B-4B47-4424-BCB0-2D81E5B0F65B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A32487B-4B47-4424-BCB0-2D81E5B0F65B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A32487B-4B47-4424-BCB0-2D81E5B0F65B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{480A7736-AF1C-4C99-B6C6-E181A2AF3C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{480A7736-AF1C-4C99-B6C6-E181A2AF3C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{480A7736-AF1C-4C99-B6C6-E181A2AF3C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{480A7736-AF1C-4C99-B6C6-E181A2AF3C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6A8C621-30C0-4FB6-8A8A-A78EC39D7545}
+	EndGlobalSection
+EndGlobal

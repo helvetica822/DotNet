@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Title>$(AssemblyName)</Title>
+		<Authors>Masashi.Ohashi</Authors>
+		<Company></Company>
+		<Copyright>Copyright © 2023 $(Authors) All Rights Reserved.</Copyright>
+		<NeutralLanguage>ja-JP</NeutralLanguage>
+		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="PresentationFramework">
+			<HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\PresentationFramework.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>
